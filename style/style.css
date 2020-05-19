@@ -1,0 +1,249 @@
+/* background color of page 1 */
+.page1 {
+  background-color: rgb(107, 206, 61);
+}
+
+
+h1 {
+  font-size: 30pt;
+  text-align: center;
+  color: rgb(245, 63, 63);
+  text-transform: uppercase;
+  margin: 100px;
+}
+
+
+
+/* my photo turning effect */
+.content {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-content: center;
+  background: rgb(107, 206, 61);
+}
+
+.image6 {
+  margin: 10px;
+  clip-path: polygon(50% 0%, 80% 50%, 50% 100%, 20% 50%);
+  animation: clipUp6 10s;
+  /* Alternative way is infinite */
+  /* animation: clipUp6 4s infinite; */
+}
+
+@keyframes clipUp6 {
+  from {
+    clip-path: polygon(25% 25%, 50% 50%, 75% 75%, 100% 100%);
+  }
+}
+
+
+/* my name   Katie Wong    progressive color changing effect */
+@import url(https://fonts.googleapis.com/css?family=Montserrat);
+
+html,
+body {
+  height: 100%;
+  font-weight: 800;
+}
+
+body {
+  /* background: #030321; */
+  background: white;
+  font-family: Arial;
+}
+
+svg {
+  display: block;
+  font: 10.5em 'Montserrat';
+  width: 960px;
+  height: 300px;
+  margin: 0 auto;
+}
+
+.text-copy {
+  fill: none;
+  stroke: white;
+  stroke-dasharray: 6% 29%;
+  stroke-width: 5px;
+  stroke-dashoffset: 0%;
+  animation: stroke-offset 5.5s infinite linear;
+}
+
+.text-copy:nth-child(1) {
+  stroke: #4D163D;
+  animation-delay: -1;
+}
+
+.text-copy:nth-child(2) {
+  stroke: #840037;
+  animation-delay: -2s;
+}
+
+.text-copy:nth-child(3) {
+  stroke: #BD0034;
+  animation-delay: -3s;
+}
+
+.text-copy:nth-child(4) {
+  stroke: #BD0034;
+  animation-delay: -4s;
+}
+
+.text-copy:nth-child(5) {
+  stroke: #FDB731;
+  animation-delay: -5s;
+}
+
+@keyframes stroke-offset {
+  100% {
+    stroke-dashoffset: -35%;
+  }
+}
+
+
+/* arrow to scroll down */
+.arrow {
+  position: absolute;
+  top: 90%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.arrow span {
+  display: block;
+  width: 30px;
+  height: 30px;
+  border-bottom: 5px solid rgb(243, 83, 9);
+  border-right: 5px solid rgb(199, 67, 7);
+  transform: rotate(45deg);
+  margin: -10px;
+  animation: animate 2s infinite;
+}
+
+.arrow span:nth-child(2) {
+  animation-delay: -0.2s;
+}
+
+.arrow span:nth-child(3) {
+  animation-delay: -0.4s;
+}
+
+@keyframes animate {
+  0% {
+    opacity: 0;
+    transform: rotate(45deg) translate(-20px, -20px);
+  }
+
+  50% {
+    opacity: 1;
+  }
+
+  100% {
+    opacity: 0;
+    transform: rotate(45deg) translate(20px, 20px);
+  }
+}
+
+
+
+
+
+/* parallax scrolling effect */
+.para {
+  background: url("https://i.pinimg.com/originals/1a/73/99/1a73991479ca3a4fef0483aafc929c57.jpg") 100% fixed;
+  background-size: cover;
+}
+
+.parainner {
+  padding: 300px;
+}
+
+.parainnerText {
+  text-align: center;
+  height: 32px;
+  background-color: rgb(200, 252, 196);
+  border-radius: 50%;
+}
+
+
+/* page 2    ABOUT ME */
+.page2 {
+  background-color: rgb(107, 206, 61);
+  text-align: center;
+}
+
+h2 {
+  font-size: 20pt;
+  text-align: center;
+  color: rgb(245, 63, 63);
+  text-transform: uppercase;
+}
+
+
+/* project view link blinking */
+@import url("https://fonts.googleapis.com/css?family=Sacramento&display=swap");
+
+.project {
+  font-size: calc(3px + 3vh);
+  line-height: calc(3px + 3vh);
+  /*   text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+    0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092;
+  color: #fccaff; */
+  text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+  color: #fff6a9;
+  font-family: "Sacramento", cursive;
+  text-align: center;
+  animation: blink 3s infinite;
+  -webkit-animation: blink 3s infinite;
+}
+
+@-webkit-keyframes blink {
+
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
+
+@keyframes blink {
+
+  20%,
+  24%,
+  55% {
+    color: #111;
+    text-shadow: none;
+  }
+
+  0%,
+  19%,
+  21%,
+  23%,
+  25%,
+  54%,
+  56%,
+  100% {
+    /*     color: #fccaff;
+    text-shadow: 0 0 5px #f562ff, 0 0 15px #f562ff, 0 0 25px #f562ff,
+      0 0 20px #f562ff, 0 0 30px #890092, 0 0 80px #890092, 0 0 80px #890092; */
+    text-shadow: 0 0 5px #ffa500, 0 0 15px #ffa500, 0 0 20px #ffa500, 0 0 40px #ffa500, 0 0 60px #ff0000, 0 0 10px #ff8d00, 0 0 98px #ff0000;
+    color: #fff6a9;
+  }
+}
